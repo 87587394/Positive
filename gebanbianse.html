@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            height: 20px;
+            line-height: 20px;
+            background-color: skyblue;
+            margin-bottom: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <script>
+        var li=document.getElementsByTagName('li')
+        for(var i=0;i<8;i++){
+            if(i%2==0){
+                li[i].style.backgroundColor="red";
+            }
+            else {
+                li[i].style.backgroundColor="pink";
+            }
+            li[i].onmouseover=function(){
+                this.C=this.style.backgroundColor;
+                this.style.backgroundColor="black"
+            }
+            li[i].onmouseout=function(){
+                this.style.backgroundColor=this.C;
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>
