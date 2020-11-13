@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            perspective-origin: center;
+            margin: 200px auto;
+            height: 200px;
+            width: 200px;
+            perspective: 300px;
+
+        }
+        .box1 {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .box1:hover{
+            animation: rotate 5s infinite linear;
+        }
+        .face1,.face2,.face3,.face4,.face5,.face6 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: skyblue;
+            opacity: 0.5;
+        }
+        .face1 {
+            transform: translate3d(0,0,100px);
+            
+        }
+        .face2 {
+            transform: translate3d(100px,0,0) rotateY(90deg);
+        }
+        .face3 {
+            transform: translate3d(0,0,-100px) rotateY(180deg);
+        }
+        .face4 {
+            transform: translate3d(-100px,0,0) rotateY(270deg); 
+        }
+        .face5 {
+            transform: translate3d(0,100px,0) rotateX(270deg);
+        }
+        .face6 {
+            transform: translate3d(0,-100px,0) rotateX(-270deg) ;
+        }
+        @keyframes rotate {
+            0%{transform: rotateX(0) rotateY(0);}
+            50%{transform: rotateX(0) rotateY(359deg);}
+            100%{transform: rotateX(359deg) rotateY(359deg);}
+        }
+        #left:checked~.box .box1 {
+            transform: rotateY(90deg);
+            transition: 2s;
+        }
+        #right:checked~.box .box1 {
+			transform: rotateY(-90deg);
+            transition: 2s;
+		}
+        #front:checked~.box .box1 {
+            transform: rotateY(0deg);
+            transition: 2s;
+        }
+        #back:checked~.box .box1 {
+			transform: rotateY(180deg);
+            transition: 2s;
+		}
+        #top:checked~.box .box1 {
+            transform: rotateX(90deg);
+            transition: 2s;
+        }
+        #bottom:checked~.box .box1 {
+			transform: rotateX(-90deg);
+            transition: 2s;
+		}
+
+    </style>
+</head>
+
+<body>
+    <input type="radio" id="front" name="select" checked />
+    <label for="front" class="text">正面</label>
+	<input type="radio" id="left" name="select" />
+	<label for="left" class="text">左边</label>
+
+	<input type="radio" id="right" name="select" />
+	<label for="right" class="text">右边</label>
+
+	<input type="radio" id="top" name="select" />
+	<label for="top" class="text">上面</label>
+
+	<input type="radio" id="bottom" name="select" />
+	<label for="bottom" class="text">下面</label>
+
+	<input type="radio" id="back" name="select" />
+	<label for="back" class="text">背面</label>
+    <div class="box">
+        <div class="box1">
+            <div class="face1">正</div>
+            <div class="face2">右</div>
+            <div class="face3">背</div>
+            <div class="face4">左</div>
+            <div class="face5">上</div>
+            <div class="face6">下</div>
+        </div>
+    </div>
+</body>
+
+</html>
