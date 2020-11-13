@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;padding: 0;
+        }
+        #box {
+            width: 200px;
+            margin: 100px auto;
+        }
+        ul {
+            width: 100%;
+            height: 50px;
+            /* margin-bottom: 10px; */
+        }
+        ul li {
+            float: left;
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid black;
+            cursor: pointer;
+            /* box-sizing: border-box; */
+        }
+        ul li.openon {
+            background-color: pink;
+            border-bottom: pink;
+        }
+        #box div {
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            display: none;
+            text-align: center;
+        }
+        #box div.openon {
+            display: block;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li class="openon">音乐</li>
+            <li>电视</li>
+            <li>综艺</li>
+        </ul>
+            <div class='openon'>音乐内容</div>
+            <div>电视内容</div>
+            <div>综艺内容</div>   
+    </div>
+</body>
+
+</html>
+<script src="neirong.js"></script>
