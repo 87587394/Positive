@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: 200px;
+            width: 400px;
+        }
+        .box img {
+            width: 400px;
+            height: 500px;
+        }
+        #button {
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button id="button">隐藏</button><br>
+        <img src="KS.jpg" alt="" id="ks">
+    </div>
+    <script>
+        var btn =document.getElementById("button")
+        var ks =document.getElementById("ks")
+        btn.onclick=function(){
+            var value=btn.innerHTML
+            if(value=="隐藏"){
+                btn.innerText="显示";
+                ks.style.display="none"
+            }
+            else if (value=="显示"){
+                btn.innerText="隐藏";
+                ks.style.display="block"
+            }
+        }
+    </script>
+</body>
+
+</html>
