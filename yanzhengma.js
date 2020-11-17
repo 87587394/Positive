@@ -5,7 +5,13 @@ function createCode() {
     for (var i = 1; i <= 4; i++) {
         let em = Math.round(Math.random() * (61 - 0) + 0);
         let char = area[em];
-        text =text + char;
+        if (!text.toUpperCase().includes(char.toUpperCase())) {
+            text =text + char;
+        }
+        else {
+            i--;
+        }
+        
         
     }
     codeBox.innerText = text;
