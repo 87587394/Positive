@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <p>p1</p>
+        <p id="p2">p2</p>
+        <p>p3</p>
+    </div>
+</body>
+
+</html>
+<script>
+    // children
+    function Children(main) {
+        var res = main.childNodes;
+        var obj = [];
+        for (var i = 0; i < res.length; i++) {
+            if (res[i].nodeType == 1) {
+                obj.push(res[i]);
+            }
+        }
+        return obj
+    }
+    console.log(Children(main));
+    // previousElmentsibling
+    function PreviousElement(index) {
+        if (index.previousSibling.nodeType == 1) {
+            return index.previousSibling;
+        }
+        else {
+            return PreviousElement(index.previousSibling)
+        }
+    }
+    console.log(PreviousElement(p2));
+
+</script>
