@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #price {
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="price">
+
+  </div>
+</body>
+
+</html>
+<script>
+  var price = document.getElementById('price');
+  var res = setInterval(function fn() {
+    var zhi = "";
+    for (var i = 0; i < 4; i++) {
+      var num = Math.floor(Math.random() * 9);
+      zhi = zhi + num;
+    }
+    price.innerText = zhi;
+  }, 1000);
+  setTimeout(function () {
+    clearInterval(res);
+  }, 10000);
+</script>
