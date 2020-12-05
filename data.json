@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "HUAWEI全网通版（亮黑色）",
+      "price": 499,
+      "time": "2017-03-15",
+      "hot": 198,
+      "img": "https://res3.vmallres.com/shopdc/pic/a0ad3ee8-1736-4869-9e00-2d9d9ecb3837.png"
+    },
+    {
+      "id": 2,
+      "title": "HUAWEI（曜石黑）",
+      "price": 129,
+      "time": "2017-02-08",
+      "hot": 25,
+      "img": "https://res2.vmallres.com/shopdcGray/shopdc/pic/8cd90fc5-3715-4ae6-aaf7-4bb8c4e681dc.png"
+    },
+    {
+      "id": 3,
+      "title": "华为畅享7（香槟金）",
+      "price": 895,
+      "time": "2017-01-25",
+      "hot": 568,
+      "img": "https://res4.vmallres.com/shopdcGray/shopdc/pic/174c80ad-0a16-4aa6-b780-532e642e011f.png"
+    },
+    {
+      "id": 4,
+      "title": "HUAWEI全网通版（曜石黑）",
+      "price": 1895,
+      "time": "2016-12-30",
+      "hot": 20000,
+      "img": "https://res3.vmallres.com/shopdcGray/shopdc/pic/3b562c53-0d14-44e7-b486-4572763ade69.png"
+    },
+    {
+      "id": 5,
+      "title": "HUAWEI全网通版（玫瑰金）",
+      "price": 3587,
+      "time": "2016-01-30",
+      "hot": 1032654,
+      "img": "https://res4.vmallres.com/shopdc/pic/26c52f2f-e9c4-4ed8-946e-80a85e0f3b6c.png"
+    },
+    {
+      "id": 6,
+      "title": "华为畅享7（香槟金）",
+      "price": 992,
+      "time": "2018-01-01",
+      "hot": 1,
+      "img": "https://res7.vmallres.com/shopdc/pic/6848442d-8e21-43e7-bd5a-5cfc4784878a.png"
+    },
+    {
+      "id": 7,
+      "title": "HUAWEI全网通版（樱语粉）",
+      "price": 564,
+      "time": "2017-02-19",
+      "hot": 400,
+      "img": "https://res3.vmallres.com/shopdc/pic/9dccd10e-abdc-462b-9e10-45c4780f9369.png"
+    },
+    {
+      "id": 8,
+      "title": "HUAWEI全网通版（曜石黑）",
+      "price": 420,
+      "time": "2017-01-25",
+      "hot": 240,
+      "img": "https://res9.vmallres.com/shopdc/pic/26317b1e-9ef9-4404-b695-08562933276b.png"
+    },
+    {
+      "id": 9,
+      "title": "HUAWEI P10（钻雕金）",
+      "price": 12,
+      "time": "2014-01-01",
+      "hot": 12345678,
+      "img": "https://res0.vmallres.com/shopdc/pic/aef66b58-54c2-46d9-8e6a-072b83b14abf.png"
+    },
+    {
+      "id": 10,
+      "title": "HUAWEI全网通版（曜石黑）",
+      "price": 420,
+      "time": "2017-01-25",
+      "hot": 240,
+      "img": "https://res3.vmallres.com/shopdcGray/shopdc/pic/cca1683c-de1c-4e6a-930e-7de071a045d8.png"
+    }
+  ]
