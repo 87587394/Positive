@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 300px;
+            border: skyblue 1px solid;
+            margin: auto;
+        }
+
+        img {
+            width: 250px;
+            height: 300px;
+        }
+
+        .aa {
+            margin-top: 400px
+        }
+
+        .back {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: skyblue;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aa"></div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='KS.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/1.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/2.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/3.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/4.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/5.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/6.jpg' alt="" class='img1'>
+    </div>
+    <div class="box" id='box'>
+        <img src="img/default.jpg" trueimg='img/7.jpg' alt="" class='img1'>
+    </div>
+
+
+    <div class="back" id='back'>
+        回到顶部
+    </div>
+</body>
+
+</html>
+<script src="utils.js"></script>
+<script>
+    let back = document.getElementById('back');
+    // let img = document.getElementsByTagName('img');
+    let img=document.getElementsByClassName('img1');
+    back.onclick = function () {
+        let winH = utils.win('scrollTop');
+        let part = winH / 50;
+        let timer = setInterval(() => {
+            winH -= part;
+            utils.win('scrollTop', winH)
+            if (winH <= 0) {
+                clearInterval(timer)
+            }
+        }, 2);
+    }
+    let winX = utils.win('clientHeight');
+
+    
+    function check(img) {
+        // if (img.flag) {
+        //     return
+        // }
+        let imgH = utils.offset(img).top;
+        let imgX = img.offsetHeight;
+        let trues = img.getAttribute('trueimg')
+        let winH = utils.win('scrollTop');
+        if (winH + winX > imgH + imgX) {
+
+            let newImg = new Image;
+            newImg.src = trues;
+            newImg.onload = function () {
+                img.src = trues;
+                newImg = null;
+                img.className='';
+                // img.flag = true;
+                fadeIn(img)
+            }
+            newImg.onerror = function () {
+
+            }
+
+        }
+    }
+    function fadeIn(img) {
+        img.style.opacity = 0.01;
+        let num = Number(img.style.opacity);
+        let timer = setInterval(() => {
+            num += 0.05;
+            img.style.opacity = num;
+            if (num >= 1) {
+                clearInterval(timer)
+            }
+        }, 17);
+    }
+    function delay(){
+        for(let i=0;i<img.length;i++){
+            check(img[i])
+        }
+    }
+    delay()
+    window.onscroll=delay;
+   
+</script>
