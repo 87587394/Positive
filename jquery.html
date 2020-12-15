@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            margin: 200px auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        section {
+            width: 300px;
+            height: 50px;
+
+        }
+
+        ul {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        li {
+            height: 100%;
+            flex: 1;
+            background-color: gray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        div {
+            width: 100%;
+            height: 200px;
+            background-color: skyblue;
+            display: none;
+        }
+
+        li.active {
+            background-color: skyblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        div.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="box">
+        <ul>
+            <li class="active">编程啊</li>
+            <li>读书啊</li>
+            <li>运动啊</li>
+
+        </ul>
+        <div class="active">编程啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+        <div>读书啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+        <div>运动啊啊啊啊啊啊</div>
+    </section>
+</body>
+<script src="./jquery-1.11.3.js"></script>
+<script>
+        $('#box ul li').click(function(){
+            $(this).addClass('active').siblings().removeClass('active').parent().nextAll().eq($(this).index()).addClass('active').siblings('div').removeClass('active')
+        })
+</script>
+
+</html>
