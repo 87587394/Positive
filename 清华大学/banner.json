@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "https://www.tsinghua.edu.cn/__local/8/48/AF/0D8EC5F10E5CFBAE7D9A33474ED_F90ED372_697D9.jpg",
+    "desc": "姜海：换位思考，共探算法世界",
+    "link": "https://www.tsinghua.edu.cn/info/1150/5373.htm"
+  },
+  {
+    "id": 2,
+    "img": "https://www.tsinghua.edu.cn/__local/2/1E/BB/8FBADED432F91210DF0688CA9AD_42080E88_49AE5.jpg",
+    "desc": "2021贺年专用邮票设计者陈楠：用设计语言传播传统文化",
+    "link": "https://www.tsinghua.edu.cn/info/1150/5365.htm"
+  },
+  {
+    "id": 3,
+    "img": "https://www.tsinghua.edu.cn/__local/F/05/48/5948CCA1184CF61E477A6397A7C_FAABBCF6_51CE6.jpg",
+    "desc": "110年，纪念这位“人民的数学家”",
+    "link": "https://mp.weixin.qq.com/s/-lYcMX6WXi7eot0SB9A23g"
+  },
+  {
+    "id": 4,
+    "img": "https://www.tsinghua.edu.cn/__local/5/A9/8C/862D8D9F1A72F57FBBBAA528E6C_3D96203E_5A15E.jpg",
+    "desc": "2020年清华大学本科生“一二·九”歌咏比赛圆满举行",
+    "link": "https://news.tsinghua.edu.cn/info/1003/83666.htm"
+  },
+  {
+    "id": 5,
+    "img": "https://www.tsinghua.edu.cn/__local/1/C9/2C/0F2678B018F393411A52DEF3F0A_F640BFA9_4DC46.jpg",
+    "desc": "大雪：深冬寒处暖",
+    "link": "https://www.tsinghua.edu.cn/info/1150/5338.htm"
+  }
+]

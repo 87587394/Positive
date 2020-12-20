@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+:after {
+    height: 0px;
+    visibility: hidden;
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    Zoom: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.yiqing {
+    height: 95px;
+}
+
+.yiqing a {
+    height: 95px;
+    display: block;
+    height: 100%;
+    background: url(https://www.tsinghua.edu.cn/js/zwky.jpg) center center;
+    background-size: cover;
+}
+
+.First_headerLine {
+    height: 6px;
+    background-color: #6510ad;
+}
+
+.First_header {
+    position: relative;
+    width: 100%;
+    user-select: none;
+    height: auto;
+    
+}
+
+#list li {
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    display: none;
+    left: 0;
+}
+#list li a {
+    overflow: hidden;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#list li:nth-child(1) {
+    display: block;
+}
+
+#list li a img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#First_fouce {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute;
+    left: 25px;
+    top: 20%;
+    float: left;
+}
+
+#First_fouce_list {
+    float: left;
+}
+
+#First_fouce li {
+    cursor: pointer;
+    float: left;
+    width: 34px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Raleway';
+    font-size: 16px;
+    margin: 0 8px;
+    color: white;
+}
+
+#First_fouce li.active {
+    background-color: #9F8027;
+}
+
+#MoreTsing {
+    float: left;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    background: #9f8027;
+    color: white;
+    padding: 0 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#MoreTsing:hover {
+    background: #461C8E;
+}
+
+#desc {
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    right: 0px;
+    color: white;
+    font-size: 25px;
+
+}
