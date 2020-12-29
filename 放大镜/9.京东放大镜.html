@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #boxa {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+    }
+
+    #box {
+      position: absolute;
+      text-align: center;
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+    }
+
+    #box2 {
+      left: 500px;
+      position: absolute;
+      border: 1px solid red;
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #mark {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 200px;
+      height: 200px;
+      cursor: move;
+    }
+    #bg{
+      position: absolute;
+     
+    }
+    #box2{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="boxa">
+    <div id="box"><img src="./iphone.jpg" alt=""></div>
+    <div id="box2"><img src="./iphone_big.jpg" alt="" id="bg"></div>
+  </div>
+</body>
+
+</html>
+<script>
+  let box = document.getElementById('box');
+  let box2=document.getElementById('box2')
+  box.onmouseenter = function () {
+    box2.style.display='block';
+    mark = document.createElement('div');
+    mark.id = 'mark';
+    box.appendChild(mark)
+  }
+  box.onmousemove = function (e) {
+    let curleft = e.clientX - box.offsetLeft - mark.offsetWidth / 2;
+    let curTop = e.clientY - box.offsetTop - mark.offsetHeight / 2;
+    curleft <= 0 ? curleft = 0 : null;
+    curTop <= 0 ? curTop = 0 : null;
+
+    curleft >= box.offsetWidth - mark.offsetWidth ? curleft = box.offsetWidth - mark.offsetWidth : null;
+    curTop >= box.offsetHeight - mark.offsetHeight ? curTop = box.offsetHeight - mark.offsetHeight : null;
+    bg.style.left = -2 * curleft+'px';
+    bg.style.top = -2 * curTop+'px';
+    mark.style.left = curleft + 'px';
+    mark.style.top = curTop + 'px'
+  }
+  box.onmouseleave = function () {
+    box.removeChild(mark);
+    box2.style.display='none'
+  }
+</script>
