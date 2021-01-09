@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    $.ajax({
+        url:'xxx',//api请求地址
+        method:'GET',//GET delete options head post put  不区分大小写
+        data:{},//请求携带的参数 格式可以是对象({key:value})和字符串(key=value)//如果传递的是字符串并且是get请求,那么就直接拼接到url后边,如果是post请求,就把字符串放到send,传递是对象转成字符串
+        async:,//是否同异步,默认是true是异步,false代表同步
+        dataType:'JSON',//服务器端返回的数据的格式 JSON,text,XML,JSONP
+        cathe:true,//是否走缓存,只给get请求下有效默认是true走缓存,false在url末尾拼接一个时间戳或者随机数
+        success:null,//当前成功请求后执行的回调函数,次函数的形参就是当前服务器的返回结果success:(res,resText,xhr)=>{}
+        error:null,//如果当前请求失败,则error对应的回调函数就会执行,参数和success一致
+        complete:null,//不管当前是请求失败还是请求成功只要请求完成就执行
+        timeOut:null,//设置当前请求超时的时间
+        headers:null,//设置当前请求头信息,传递的值是对象类型的{key:value}请求头中的属性值不能是汉字如果想传递汉字那就是给汉字进行转码
+        contentType://前端传给后端类型的格式默认值是 "application/x-www-form-urlencoded"
+        //客户端传递给服务器信息的格式类型一般都是字符串,常用的 form-data表单数据:JSON格式 '{'name':'xxx',"lx":1}'
+        //x-www-form-urlencoded:name=xxx&lx=1
+   
+    })
+    // jq版的ajax是在jQuery自己身上存放的,当使用的时候rag其执行,并且给其传递一个对象,对象里存储的键值对就是当前请求所需的参数或者配置
+</script>

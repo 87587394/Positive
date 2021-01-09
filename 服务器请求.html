@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // node -v  npm -v
+    // node 是一种语言后台 更应该是一种环境\
+    // 在安装node的过程中会自动把npm一块下载下来，npm可以在咱们的项目中下载各种依赖(插件)，在说通俗一点就是可以方便的管理咱们的项目
+    // https://www.npmjs.com/ 可以支持查看当前npm说能下载的模块
+
+    // npm install jquery
+
+    // npm install 模块名称 下载当前依赖(默认下载最新的)
+    // npm install 模块名@1.1.1
+
+    // npm uninstall 模块名
+
+    // 当你第一次下载模块(依赖)的时候，在当前项目里会自动生成一个node_modules文件夹，里边存放的就是你下载的模块
+
+    //------------------------------------------------------
+    // 一般情况下对于一个项目来说，咱们所做的第一件事就是执行 npm init -y 生成配置化清单
+
+    // npm init -y 初始化你的项目(会默认生成一个package.json文件)
+    // npm install 按照package.json里的模块配置一次下载所需的依赖
+
+    // npm install 模块名称 下载当前依赖(默认下载最新的)
+    // npm install 模块名@1.1.1
+
+    // npm uninstall 模块名
+
+
+    // 一个新的项目的流程 -->创建一个文件夹-->吧当前文件夹变成仓库(git init)-->初始化当前项目(npm init -y)-->下载所需的依赖(npm install ...) -->正常开发-->把本地的项目上传到远程仓库(上传的时候是不包括node_modules的)【在使用git上传代码的时候，.gitignore文件会帮咱们把忽略的文件忽略掉】
+
+    // 作为一个项目的开发成员，所做的事-->git clone当前项目-->跑环境(npm install)-->正常开发
+
+
+    //客户端能够把服务端发送请求,将服务端反馈的数据进行接收和处理
+    //服务端能够接受服务端的请求,请求把相应的数据返回给客户端
+      // 客户端：能够向服务端发送请求，还能够把服务端反馈的数据进行接收和处理
+  // 服务端：能够接收客户端的请求，请求把相应的数据返回给客户端
+
+  // https://credit.baidu.com:80/bkrcredit/cardList?fbank=3017&nf=fbank#index
+
+  // - 协议:(https://):传输协议就是能够把客户端和服务端通讯的信息进行传递的工具
+  //   + http:超文本传输协议，除了传递文本，还可以传递媒体资源文件以及XML格式数据
+  //   + https：更加安全的http，一般涉及支付的网站都要采用https协议(s:ssl加密传输)
+  //   + ftp：文件传输协议(一般用于把本地资源上传到服务器，就是把你的前端资源代码上传到服务器的时候用到的一种传输协议)
+
+  // - 域名:(credit.baidu.com)
+  //   + 顶级域名 baidu.com (以后花钱买域名的时候，只需要把顶级域名买下就可以，去万网买)
+  //   + 一级域名 credit.baidu.com  bike.baidu.com
+  //   + 二级域名 know.credit.baidu.com
+  //   + 三级域名 cqw.know.credit.baidu.com
+  //   + .com 国际域名(想面向国际化)
+  //   + .cn 中文域名(想在中国玩一玩)
+  //   + .com.cn
+  //   + .edu 教育类
+  //   + .gov 政府类
+  //   + .io 博客
+  //   + .org 官方组织
+  //   + .net 系统类
+
+  // - 端口号:(:80) 0~65535，用端口号来区分同一台服务器上不同的项目，一个端口下可以部署一个项目
+  //   + http默认端口号是80
+  //   + https默认端口号是 443
+  //   + ftp默认端口号是 21
+  //   + 如果项目采用的就是默认端口号，那我们在写地址的时候可以不加端口号，浏览器在发送请求的时候会帮我们加上
+
+  // - 请求资源路径名称:(/bkrcredit/cardList)
+  //   + 先去画图(服务器接收到请求后要做的事)
+  //   + 默认的路径或者名称(不指定资源名，服务器会找默认的资源，一般资源的默认资源名称是 default.html、index.html...当然这些咱们都可以在服务器端进行配置)
+  //   + 伪URL地址的处理(SEO搜索引擎优化)
+
+//   - 问号传参信息:(?fbank=3017&nf=fbank)
+//     + 客户端把信息传递给服务器，有很多的方式
+//         + URL地址问号传参
+// - HASH值:(#index)
+//     + 锚点定位
+//     + 基于HASH实现路由切换(不同的HASH值实现展示不同的组件或者模块)
+
+// a.xxxx.html 
+// encodeURI('中国')
+// "%E4%B8%AD%E5%9B%BD"
+// decodeURI('%E4%B8%AD%E5%9B%BD')
+// "中国"
+// encodeURIComponent和decodeURIComponent也是转码和解码的，但是他转码之后除了字母全部转换成乱码，(一般转一些参数)
+// 那encodeURI只能转汉字，他可以转整个url
+// location和history
+
+// history是当前页面切换的历史记录，里边有当前切换地址的一些信息和操作方法，
+// 在history中会有一个存储页面信息的池子，只要你打开了某一个页面不关闭他，那当前那个页面的历史记录就会保存在池子里
+
+// history自己身上的length代表了当前历史栈中存储了历史页面的个数
+// 还在当前history实例所属类的原型上有go、back、forward方法，他们能够实现对页面的前进(forward)和后退(back)或者实现指定层级的前进和后退(go方法)
+
+    // 1.DNS解析
+    // 当发送请求的时候，先把请求发送到DNS解析服务器(DNS上存储着每一个域名相对应的服务器的IP地址)，找到当前域名对应的IP地址，然后在向这个IP地址发送请求找到对应的服务器
+
+    // 2.DNS优化
+    // - DNS缓存(一般浏览器会在第一次解析之后，默认建立缓存，时间很短，大概一分钟左右)
+    // - 做DNS预获取dns-prefetch(在页面开始加载的时候，就把当前页面中需要访问的其他域名信息进行提前的DNS解析，以后加载到具体内时候就可以不用域名解析了)
+    // - 减少DNS解析次数(一个网站中我们需要发送的请求域名和服务器尽可能减少)
+    /*
+      HTTP状态码
+        1~5开头的三位数字
+        - 200 OK：成功
+        - 201 CREATE：一般应用于告诉服务器创建一个新文件，最后服务器创建成功以后返回状态码
+        - 204 NO CONTENT：对于某些请求(例如PUT或者DELETE)，服务器不想处理，可以返回空内容，但是这次请求也是成功的，返回状态码是204
+        - 301 ：永久重定向 一般用于域名的迁移
+        - 302 ：临时转移 之前302做临时转移的事，现在是307代表这个意思了 ==>服务器的负载均衡等
+        - 304 ：设置HTTP的协商缓存
+        - 400 ：传递给服务器的参数错误
+        - 401 ：没有权限访问
+        - 404 ：请求地址错误
+        - 500 ： 服务器的未知错误
+        - 503 ： 服务器超负荷
+
+         200 304 404 500 503
+          let xhr = new XMLHttpRequest; // 创建一个ajax
+    console.log(xhr.readyState,12); // 0 刚刚创建了一个ajax
+    xhr.open('get','./data.json',true); // 打开一个请求
+    console.log(xhr.readyState,14); // 1 已经打开了一个请求(配置好了请求)
+    // params1:请求的方式
+    // params2:请求的资源链接
+    // params3：是否同异步，不传默认是true就是异步，传递false就是同步
+
+    // 监听当前请求的状态
+    xhr.onreadystatechange = function(){
+      console.log(xhr.readyState);
+      // 如果当前的状态码是2，那就说明已经把响应头接受完毕了
+      // 如果当前的状态码是3，那说明客户端已经开始接受响应体(如果在状态码是3的时候就获取响应体，那有可能获取的不完全)
+      // 如果当前的状态码是4，说明客户端已经把响应体接受完毕
+          // console.log(xhr.getAllResponseHeaders()); // 获取当前的响应头
+      console.log(xhr.getResponseHeader('Accept-Ranges')); // 获取指定的响应头对应的信息(获取单个)
+      // console.log(xhr.response);// 当前请求回来的主体内容
+      // xhr.responseText：当前请求回来的字符串版的肢主体内容
+      // responseURL：当前请求的url
+      // responseXML: 存储的是请求回来的XML格式的数据
+      // status: 200 当前的HTTP状态码
+      // statusText: 当前HTTP状态的描述 "OK"代表成功
+      // timeout: 请求超时的时间
+      // getAllResponseHeaders //获取全部响应头的信息
+      // getrResponseHeader('key')//获取单个响应头的信息 
+      // setrResponseHeader('key',value)// value自动转为字符串 在xhr.send()之前设置
+  
+      //
+      // withCredentials=true //默认false 允许跨域请求中携带资源凭证
+      console.log(xhr);
+    }   xhr.open() // 打开一个请求(配置一个请求)
+    xhr.send() // 发送一个请求
+    xhr.abort(); // 终止当前的请求
+
+    // DONE: 4
+    // HEADERS_RECEIVED: 2
+    // LOADING: 3
+    // OPENED: 1
+    // UNSENT: 0
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // HTTP请求方式
+      //  - GET系列
+        //   + GET 
+        //   + DELETE 一般用于告诉服务器删除某些信息
+        //   + HEAD 只获取响应头的内容。响应的主体内容不想要
+        //   + OPTIONS 试探性的请求，给服务器发送个请求，看看服务器能不能接收到，如果接受到能不能正常的返回
+
+        // - POST系列
+        //   + POST 
+        //   + PUT 和DELTE是相对应的，告诉服务器要存储某些东西
+
+        // 以上这些请求就是为了请求的语义化，其实没有什么实际意义，真正工作的时候用的最多的还是get和post请求
+
+// GET系列和POST系列的具体差别
+    // GET是在url后问号传参
+    // POST是在send()中进行传参,而且只有在send中的数据才叫做请求体
+
+      // 1、GET传递给服务器的参数要比POST少，因为浏览器对URL的长度有限制(IE一般是2kb左右，谷歌浏览器的限制一般是6到7kb左右)
+      // xhr.open('get','./json/product.json?name=1&age=2',true); // GET传参的方式
+      // send({anme:1,age:2,sex:0}); // post传参的形式
+
+      //2、get请求会产生缓存，如果没一次请求的地址一模一样，这样他就会走缓存
+      // 'http://www.baidu.com:8080/index.html?name=1&age=2'
+      // 'http://www.baidu.com:8080/index.html?name=1&age=3'
+      // 如果你不想走缓存，只要保证每一次请求的地址有不一样的地方就可以(一般都是参数)
+
+      // let flag = Date.now() // 获取时间戳 // 不让这次请求走缓存的办法(flag永远不会重复)
+      // 'http://www.baidu.com:8080/index.html?name=9&age=2&flag=' + flag;
+
+      // 利用随机数
+      let num = Math.random(); // 获取0-1之间的随机小数
+      console.log(num);
+       // 'http://www.baidu.com:8080/index.html?name=9&age=2&flag=' + num;
+      </script>
+</body>
+
+</html>
+
+  </script>
+</body>
+
+</html>
